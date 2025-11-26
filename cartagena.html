@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cartagena — Sabores y Destinos</title>
+  <meta name="description" content="Cartagena, sabores caribeños y rutas gastronómicas para disfrutar.">
+  <meta name="theme-color" content="#ff7b00">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-container{padding:26px 28px}
+    .page-container h1{margin:0 0 18px}
+    .page-container h2{margin:26px 0 12px}
+    .page-container .card{margin:8px 0 14px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.08)}
+    .page-container .gallery-grid{gap:14px}
+    .page-container .simple-carousel{margin:18px 0 26px}
+    .page-container div[style*="grid-template-columns"]{margin:12px 0 20px}
+    .page-container [id^="interaccion-"]{margin-top:22px;padding-top:8px}
+    .page-container .back-btn{margin-top:18px;display:inline-block}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">← Sabores y Destinos</a>
+      <div style="display:flex;gap:8px">
+        <a class="back-btn" href="index.html">Volver</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-container fade-in">
+    <h1>Cartagena, Colombia</h1>
+    <p class="center">Sabores caribeños, mercados marinos y hospitalidad histórica.</p>
+
+    <div class="simple-carousel" style="overflow:hidden; height:280px; border-radius:10px; margin:14px 0;">
+      <div class="slide" style="background:url('https://commons.wikimedia.org/wiki/Special:FilePath/Torre%20del%20Reloj,%20Cartagena%2003.jpg') center/cover; height:280px" aria-label="Torre del Reloj de Cartagena"></div>
+      <div class="slide" style="background:url('https://commons.wikimedia.org/wiki/Special:FilePath/Castillo%20de%20San%20Felipe%20-%20Cartagena%20-%20Colombia.JPG') center/cover; height:280px" aria-label="Castillo de San Felipe de Barajas"></div>
+      <div class="slide" style="background:url('https://commons.wikimedia.org/wiki/Special:FilePath/Castillo%20de%20San%20Felipe%20de%20Barajas%2001.jpg') center/cover; height:280px" aria-label="Castillo de San Felipe de Barajas"></div>
+    </div>
+
+    <h2>Información general</h2>
+    <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:16px;align-items:start;">
+      <div>
+        <p>Cartagena de Indias combina historia, arquitectura colonial y una cocina caribeña vibrante. Su Ciudad Amurallada, el Castillo de San Felipe y el ambiente costeño crean el escenario perfecto para rutas gastronómicas de mar y tradición.</p>
+      </div>
+      <div>
+        <div style="position:relative;padding-top:56%">
+          <iframe src="https://www.youtube.com/embed/P2KvCua6Xf4" title="Cartagena presentación" style="position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:10px" loading="lazy" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <h2>Gastronomía típica</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px">
+      <a class="card interactive" href="cartagena-arepa-de-huevo.html" style="padding:12px;text-decoration:none">
+        <h3>Arepa de huevo</h3>
+        <p>Clásico callejero crujiente, símbolo del Caribe colombiano.</p>
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Arepa%20de%20huevo%20por%20dentro.jpg" alt="Arepa de huevo" style="width:100%;height:140px;object-fit:cover;border-radius:8px;margin-top:8px">
+      </a>
+      <a class="card interactive" href="cartagena-cazuela-de-mariscos.html" style="padding:12px;text-decoration:none">
+        <h3>Cazuela de mariscos</h3>
+        <p>Crema de mar con coco y especias, servida con patacones.</p>
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cazuela%20de%20mariscos.jpg" alt="Cazuela de mariscos" style="width:100%;height:140px;object-fit:cover;border-radius:8px;margin-top:8px">
+      </a>
+      <a class="card interactive" href="cartagena-arroz-con-coco.html" style="padding:12px;text-decoration:none">
+        <h3>Arroz con coco</h3>
+        <p>Acompañante dulce-salado perfecto para pescado frito.</p>
+        <img src="https://www.infobae.com/resizer/v2/43YK7ZLPFBBVVBMKMXVWYMGRQ4.jpeg?auth=1f6b4076105319daffb0e8921cad94b0a224450445cb109cd81657cdf4a8c992&smart=true&width=992&height=558&quality=85" alt="Arroz con coco" style="width:100%;height:140px;object-fit:cover;border-radius:8px;margin-top:8px">
+      </a>
+    </div>
+
+    <h2>Restaurantes recomendados</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px">
+      <div class="card" style="padding:12px">
+        <img src="https://media-cdn.tripadvisor.com/media/photo-s/0e/4e/25/7d/la-cevicheria-in-cartagena.jpg" alt="Restaurante en Cartagena" style="width:100%;border-radius:8px;object-fit:cover;height:140px">
+        <h3>La Cevichería</h3>
+        <p>Dirección: Centro Histórico</p>
+        <p>Precio promedio: $$</p>
+        <p>Tipo: Mariscos caribeños</p>
+        <p>Horarios: 12:00–22:00</p>
+        <p>Reseña: ceviches frescos y ambiente colonial.</p>
+        <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=La+Cevicher%C3%ADa+Cartagena" target="_blank">Abrir en Maps</a>
+      </div>
+      <div class="card" style="padding:12px">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/30/8e/d2/3a/patio.jpg?w=900&h=500&s=1" alt="Restaurante en Cartagena" style="width:100%;border-radius:8px;object-fit:cover;height:140px">
+        <h3>Carmen Cartagena</h3>
+        <p>Dirección: San Diego</p>
+        <p>Precio promedio: $$$</p>
+        <p>Tipo: Fusión colombiana</p>
+        <p>Horarios: 18:00–23:00</p>
+        <p>Reseña: técnica contemporánea con producto local.</p>
+        <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Carmen+Cartagena" target="_blank">Abrir en Maps</a>
+      </div>
+      <div class="card" style="padding:12px">
+        <img src="https://c7.alamy.com/comp/WE8DNK/colombia-bolivar-department-cartagena-listed-as-world-heritage-by-unesco-la-mulata-restaurant-located-in-the-old-colonial-city-WE8DNK.jpg" alt="Restaurante en Cartagena" style="width:100%;border-radius:8px;object-fit:cover;height:140px">
+        <h3>La Mulata</h3>
+        <p>Dirección: Getsemaní</p>
+        <p>Precio promedio: $$</p>
+        <p>Tipo: Caribe tradicional</p>
+        <p>Horarios: 12:00–22:00</p>
+        <p>Reseña: clásicos costeños con toque casero.</p>
+        <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=La+Mulata+Cartagena" target="_blank">Abrir en Maps</a>
+      </div>
+    </div>
+
+    <h2>Eventos gastronómicos</h2>
+    <ul>
+      <li>Festival del Frito Cartagenero — enero</li>
+      <li>Ruta del Sabor Caribe — todo el año</li>
+    </ul>
+
+    <h2>Experiencias culinarias</h2>
+    <ul>
+      <li>Tour de comida callejera en Getsemaní</li>
+      <li>Clases de cocina caribeña</li>
+      <li>Visita a plazas de mercado</li>
+    </ul>
+
+    <h2>Galería</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Torre%20del%20Reloj,%20Cartagena%2003.jpg" alt="Torre del Reloj" style="width:100%;height:160px;object-fit:cover;border-radius:8px">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Castillo%20de%20San%20Felipe%20-%20Cartagena%20-%20Colombia.JPG" alt="Castillo de San Felipe" style="width:100%;height:160px;object-fit:cover;border-radius:8px">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Arepa%20de%20huevo%20por%20dentro.jpg" alt="Arepa de huevo" style="width:100%;height:160px;object-fit:cover;border-radius:8px">
+    </div>
+
+    
+
+    <h2>Gastronomía Típica</h2>
+    <p>Arroz con coco, pescado frito, patacones y cazuela de mariscos.</p>
+
+    <h2>Actividades</h2>
+    <ul>
+      <li>Pasear por la Ciudad Amurallada</li>
+      <li>Tour gastronómico por Getsemaní</li>
+      <li>Tarde de mariscos en la playa</li>
+    </ul>
+
+    <div id="map-target" data-place="cartagena" style="margin-top:18px;"></div>
+
+    <h2>Interacción</h2>
+    <div id="interaccion-cartagena" style="display:grid;gap:12px">
+      <button id="rate-ctg" class="btn primary">Califica este lugar</button>
+      <div id="stars-ctg" style="display:none;font-size:24px;color:#ff7b00">
+        <span data-v="1">★</span><span data-v="2">★</span><span data-v="3">★</span><span data-v="4">★</span><span data-v="5">★</span>
+        <span id="rate-val-ctg" style="margin-left:8px"></span>
+      </div>
+      <div style="display:flex;gap:8px;align-items:center">
+        <a class="btn ghost" href="https://twitter.com/intent/tweet?text=Cartagena%20gastron%C3%B3mica&url=" target="_blank">Twitter</a>
+        <a class="btn ghost" href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank">Facebook</a>
+        <a class="btn ghost" href="https://api.whatsapp.com/send?text=Cartagena%20gastron%C3%B3mica%20" target="_blank">WhatsApp</a>
+      </div>
+      <form id="form-ctg" style="display:flex;gap:8px">
+        <input id="comment-ctg" type="text" placeholder="Escribe un comentario" style="flex:1;padding:8px;border-radius:8px;border:1px solid #ddd">
+        <button class="btn primary" type="submit">Enviar</button>
+      </form>
+      <ul id="list-ctg" style="display:grid;gap:6px"></ul>
+    </div>
+
+    <a class="back-btn" href="index.html">⟵ Volver al Inicio</a>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    (function(){
+      const rateBtn = document.getElementById('rate-ctg');
+      const stars = document.getElementById('stars-ctg');
+      const val = document.getElementById('rate-val-ctg');
+      const form = document.getElementById('form-ctg');
+      const inp = document.getElementById('comment-ctg');
+      const list = document.getElementById('list-ctg');
+      const saved = JSON.parse(localStorage.getItem('comments-cartagena')||'[]');
+      saved.forEach(t=>{ const li=document.createElement('li'); li.textContent=t; list.appendChild(li); });
+      rateBtn.addEventListener('click',()=>{ stars.style.display='block'; });
+      stars.querySelectorAll('span[data-v]').forEach(s=>{
+        s.addEventListener('click',()=>{ const n=s.getAttribute('data-v'); localStorage.setItem('rating-cartagena',n); val.textContent=n+'/5'; });
+      });
+      form.addEventListener('submit',(e)=>{ e.preventDefault(); const t=inp.value.trim(); if(!t) return; const li=document.createElement('li'); li.textContent=t; list.appendChild(li); const arr=JSON.parse(localStorage.getItem('comments-cartagena')||'[]'); arr.push(t); localStorage.setItem('comments-cartagena',JSON.stringify(arr)); inp.value=''; });
+    })();
+  </script>
+</body>
+</html>

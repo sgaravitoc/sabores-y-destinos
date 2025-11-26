@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Barcelona — Sabores y Destinos</title>
+  <meta name="description" content="Barcelona, tapas, paella y la vibrante escena gastronómica catalana.">
+  <meta name="theme-color" content="#ff7b00">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">← Sabores y Destinos</a>
+      <div style="display:flex;gap:8px">
+        <a class="back-btn" href="index.html">Volver</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-container fade-in">
+    <h1>Barcelona, España</h1>
+    <p class="center">Tapas, paella, mercados de la Boquería y la esencia mediterránea.</p>
+
+    <div class="simple-carousel" style="overflow:hidden; height:280px; border-radius:10px; margin:14px 0;">
+      <div class="slide" style="background:url('https://images.unsplash.com/photo-1539037116277-4db20889f2d4?auto=format&fit=crop&w=1600&q=60') center/cover; height:280px"></div>
+      <div class="slide" style="background:url('https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?auto=format&fit=crop&w=1600&q=60') center/cover; height:280px"></div>
+      <div class="slide" style="background:url('https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&fit=crop&w=1600&q=60') center/cover; height:280px"></div>
+    </div>
+
+    <h2>Gastronomía típica</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px">
+      <a class="card interactive" href="barcelona-paella.html" style="padding:12px;text-decoration:none">
+        <h3>Paella</h3>
+        <p>Arroz mediterráneo con sofrito, caldo y marisco o carne.</p>
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/PAELLA.JPG" alt="Paella" style="width:100%;height:140px;object-fit:cover;border-radius:8px;margin-top:8px">
+      </a>
+      <a class="card interactive" href="barcelona-pan-con-tomate.html" style="padding:12px;text-decoration:none">
+        <h3>Pan con tomate</h3>
+        <p>Pan tostado con tomate, aceite de oliva y sal.</p>
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Pan%20con%20tomate%20(4559621541).jpg" alt="Pan con tomate" style="width:100%;height:140px;object-fit:cover;border-radius:8px;margin-top:8px">
+      </a>
+      <a class="card interactive" href="barcelona-crema-catalana.html" style="padding:12px;text-decoration:none">
+        <h3>Crema catalana</h3>
+        <p>Postre cremoso con azúcar caramelizado.</p>
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Crema%20Catalana%20(7%20Portes).jpg" alt="Crema catalana" style="width:100%;height:140px;object-fit:cover;border-radius:8px;margin-top:8px">
+      </a>
+    </div>
+
+    <h2>Restaurantes recomendados</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px">
+      <div class="card" style="padding:12px">
+        <img src="https://media.timeout.com/images/105978607/image.jpg" alt="Restaurante en Barcelona" style="width:100%;border-radius:8px;object-fit:cover;height:140px">
+        <h3>Can Culleretes</h3>
+        <p>Dirección: Barrio Gótico</p>
+        <p>Precio promedio: $$</p>
+        <p>Tipo: Cocina catalana tradicional</p>
+        <p>Horarios: 13:00–23:00</p>
+        <p>Reseña: uno de los más antiguos de la ciudad.</p>
+        <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Can+Culleretes+Barcelona" target="_blank">Abrir en Maps</a>
+      </div>
+      <div class="card" style="padding:12px">
+        <img src="https://media.timeout.com/images/105980075/750/422/image.jpg" alt="Restaurante en Barcelona" style="width:100%;border-radius:8px;object-fit:cover;height:140px">
+        <h3>Cal Pep</h3>
+        <p>Dirección: El Born</p>
+        <p>Precio promedio: $$</p>
+        <p>Tipo: Tapas de producto</p>
+        <p>Horarios: 13:00–23:00</p>
+        <p>Reseña: barra de tapas emblemática.</p>
+        <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Cal+Pep+Barcelona" target="_blank">Abrir en Maps</a>
+      </div>
+      <div class="card" style="padding:12px">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/78/c1/94/nuevo-bar-boqueria.jpg?w=900&h=-1&s=1" alt="Restaurante en Barcelona" style="width:100%;border-radius:8px;object-fit:cover;height:140px">
+        <h3>La Boquería</h3>
+        <p>Dirección: La Rambla</p>
+        <p>Precio promedio: $</p>
+        <p>Tipo: Paradas de mercado</p>
+        <p>Horarios: 08:00–20:00</p>
+        <p>Reseña: tapas y producto fresco.</p>
+        <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Mercat+de+la+Boqueria" target="_blank">Abrir en Maps</a>
+      </div>
+    </div>
+
+    <h2>Eventos gastronómicos</h2>
+    <ul>
+      <li>Fira de Tapas y Vinos de Barcelona</li>
+      <li>Semana de Gastronomía Catalana</li>
+    </ul>
+
+    <h2>Experiencias culinarias</h2>
+    <ul>
+      <li>Clase de paella y arroces</li>
+      <li>Ruta de tapas por el Born</li>
+      <li>Visita guiada a La Boquería</li>
+    </ul>
+
+    <h2>Galería</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px">
+      <img src="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?auto=format&fit=crop&w=800&q=60" alt="Barcelona ciudad" style="width:100%;height:160px;object-fit:cover;border-radius:8px">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/PAELLA.JPG" alt="Paella" style="width:100%;height:160px;object-fit:cover;border-radius:8px">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Crema%20Catalana%20(7%20Portes).jpg" alt="Crema catalana" style="width:100%;height:160px;object-fit:cover;border-radius:8px">
+    </div>
+
+    <h2>Gastronomía Típica</h2>
+    <p>Paella, tapas, pan con tomate, jamón ibérico, crema catalana y vinos locales.</p>
+
+    <h2>Juego Interactivo: Tour de Tapas</h2>
+    <div class="interactive-section">
+      <p>¡Recorre los bares de tapas de Barcelona! Encuentra las combinaciones perfectas:</p>
+      
+      <div class="tapas-game">
+        <div class="game-instructions">
+          <h4>Instrucciones:</h4>
+          <p>Haz clic en una tapa y luego en su bebida perfecta para hacer la combinación correcta.</p>
+          <div class="score-board">
+            <span>Puntos: <span id="tapas-score">0</span></span>
+            <span>Intentos: <span id="tapas-attempts">6</span></span>
+          </div>
+        </div>
+        
+        <div class="tapas-grid">
+          <div class="tapas-section">
+            <h4>Tapas</h4>
+            <div class="tapas-items">
+              <div class="tapas-item" data-tapa="paella" data-combo="sangria">
+                <div class="tapa-icon">🥘</div>
+                <span>Paella</span>
+              </div>
+              <div class="tapas-item" data-tapa="jamon" data-combo="vino">
+                <div class="tapa-icon">🥓</div>
+                <span>Jamón Ibérico</span>
+              </div>
+              <div class="tapas-item" data-tapa="patatas" data-combo="cerveza">
+                <div class="tapa-icon">🍟</div>
+                <span>Patatas Bravas</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="drinks-section">
+            <h4>Bebidas</h4>
+            <div class="drinks-items">
+              <div class="drink-item" data-drink="sangria">
+                <div class="drink-icon">🍷</div>
+                <span>Sangría</span>
+              </div>
+              <div class="drink-item" data-drink="vino">
+                <div class="drink-icon">🍷</div>
+                <span>Vino Tinto</span>
+              </div>
+              <div class="drink-item" data-drink="cerveza">
+                <div class="drink-icon">🍺</div>
+                <span>Cerveza</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div id="tapas-message" class="game-message"></div>
+        <button id="reset-tapas-game" class="btn primary" style="display:none;">Jugar de nuevo</button>
+      </div>
+    </div>
+
+    <h2>Actividades</h2>
+    <ul>
+      <li>Ruta de tapas por el Barrio Gótico</li>
+      <li>Visitar el Mercado de la Boquería</li>
+      <li>Clase de cocina catalana tradicional</li>
+    </ul>
+
+    <div id="map-target" data-place="barcelona" style="margin-top:18px;"></div>
+
+    <a class="back-btn" href="index.html">⟵ Volver al Inicio</a>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Oaxaca — Sabores y Destinos</title>
+  <meta name="description" content="Oaxaca, moles, mercados y mezcal: descubre su cocina y cultura.">
+  <meta name="theme-color" content="#ff7b00">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-container{padding:26px 28px}
+    .page-container h1{margin:0 0 18px}
+    .page-container h2{margin:26px 0 12px}
+    .page-container .card{margin:8px 0 14px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.08)}
+    .page-container .gallery-grid{gap:14px}
+    .page-container .simple-carousel{margin:18px 0 26px}
+    .page-container div[style*="grid-template-columns"]{margin:12px 0 20px}
+    .page-container [id^="interaccion-"]{margin-top:22px;padding-top:8px}
+    .page-container .back-btn{margin-top:18px;display:inline-block}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">← Sabores y Destinos</a>
+      <div style="display:flex;gap:8px">
+        <a class="back-btn" href="index.html">Volver</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-container fade-in">
+    <h1>Oaxaca, México</h1>
+    <p class="center">Moles, mercados, mezcal y tradición viva.</p>
+
+    <div class="simple-carousel" style="overflow:hidden; height:280px; border-radius:10px; margin:14px 0;">
+      <div class="slide" style="background:url('https://commons.wikimedia.org/wiki/Special:FilePath/Monte%20Alban,%20Oaxaca.%20Agosto%202009.JPG') center/cover; height:280px" aria-label="Pirámides de Monte Albán"></div>
+      <div class="slide" style="background:url('https://commons.wikimedia.org/wiki/Special:FilePath/Oaxaca%20de%20Ju%C3%A1rez,%20Monte%20Alb%C3%A1n%2006.jpg') center/cover; height:280px" aria-label="Plataformas y plaza de Monte Albán"></div>
+      <div class="slide" style="background:url('https://commons.wikimedia.org/wiki/Special:FilePath/Oaxaca%20de%20Ju%C3%A1rez,%20Monte%20Alb%C3%A1n%2003.jpg') center/cover; height:280px" aria-label="Vista panorámica de Monte Albán"></div>
+    </div>
+
+    <h2>Información general</h2>
+    <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:16px;align-items:start;">
+      <div>
+        <p>Oaxaca es cuna de moles, mercados y mezcal. Su herencia zapoteca y mixteca convive con una escena culinaria que honra el maíz, el cacao y las técnicas tradicionales.</p>
+      </div>
+      <div>
+        <div style="position:relative;padding-top:56%">
+          <iframe src="https://www.youtube.com/embed/N6m-Mh9tJCE" title="Oaxaca presentación" style="position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:10px" loading="lazy" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <h2>Gastronomía típica</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px">
+      <a class="card interactive" href="oaxaca-mole-negro.html" style="padding:12px;text-decoration:none">
+        <h3>Mole negro</h3>
+        <p>Salsa compleja con cacao y chiles, orgullo oaxaqueño.</p>
+        <img src="https://cdn0.recetasgratis.net/es/posts/5/4/6/mole_negro_76645_orig.jpg" alt="Mole negro" style="width:100%;height:140px;object-fit:cover;border-radius:8px;margin-top:8px">
+      </a>
+      <a class="card interactive" href="oaxaca-tlayuda.html" style="padding:12px;text-decoration:none">
+        <h3>Tlayuda</h3>
+        <p>Tortilla grande crujiente con quesillo y tasajo.</p>
+        <img src="https://ep01.epimg.net/verne/imagenes/2020/07/24/mexico/1595548705_180095_1595548849_noticia_normal.jpg" alt="Tlayuda" style="width:100%;height:140px;object-fit:cover;border-radius:8px;margin-top:8px">
+      </a>
+      <a class="card interactive" href="oaxaca-chapulines.html" style="padding:12px;text-decoration:none">
+        <h3>Chapulines</h3>
+        <p>Botana tradicional tostada, sabor a campo y maíz.</p>
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Chapulines%20Oaxaca.jpg" alt="Chapulines" style="width:100%;height:140px;object-fit:cover;border-radius:8px;margin-top:8px">
+      </a>
+    </div>
+
+    <h2>Restaurantes recomendados</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px">
+      <div class="card" style="padding:12px">
+        <img src="https://resizer.otstatic.com/v3/photos/69364861-2?width=752&height=752&webp=true" alt="Restaurante en Oaxaca" style="width:100%;border-radius:8px;object-fit:cover;height:140px">
+        <h3>Casa Oaxaca</h3>
+        <p>Dirección: Centro Histórico</p>
+        <p>Precio promedio: $$$</p>
+        <p>Tipo: Alta cocina oaxaqueña</p>
+        <p>Horarios: 13:00–23:00</p>
+        <p>Reseña: reinterpretaciones de moles y mezcalería.</p>
+        <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Casa+Oaxaca+Restaurante" target="_blank">Abrir en Maps</a>
+      </div>
+      <div class="card" style="padding:12px">
+        <img src="https://losdanzantesoaxaca.com.mx/wp-content/uploads/2024/04/ATMOSPHERE-VI.webp" alt="Restaurante en Oaxaca" style="width:100%;border-radius:8px;object-fit:cover;height:140px">
+        <h3>Los Danzantes Oaxaca</h3>
+        <p>Dirección: Jalatlaco</p>
+        <p>Precio promedio: $$</p>
+        <p>Tipo: Cocina contemporánea</p>
+        <p>Horarios: 13:00–23:00</p>
+        <p>Reseña: producto local y coctelería de mezcal.</p>
+        <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Los+Danzantes+Oaxaca" target="_blank">Abrir en Maps</a>
+      </div>
+      <div class="card" style="padding:12px">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVQ_VkEiHbx5vQ3z1QL5q-iKcyNDSpsXAkLg&s" alt="Restaurante en Oaxaca" style="width:100%;border-radius:8px;object-fit:cover;height:140px">
+        <h3>Leña y Fuego</h3>
+        <p>Dirección: Mercado 20 de Noviembre</p>
+        <p>Precio promedio: $$</p>
+        <p>Tipo: Tradicional al carbón</p>
+        <p>Horarios: 12:00–21:00</p>
+        <p>Reseña: antojos oaxaqueños a la parrilla.</p>
+        <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Le%C3%B1a+y+Fuego+Oaxaca" target="_blank">Abrir en Maps</a>
+      </div>
+    </div>
+
+    <h2>Eventos gastronómicos</h2>
+    <ul>
+      <li>Feria del Mezcal — julio</li>
+      <li>Festival de los 7 Moles — julio</li>
+    </ul>
+
+    <h2>Experiencias culinarias</h2>
+    <ul>
+      <li>Tour de mercados y tlayudas</li>
+      <li>Clases de mole tradicional</li>
+      <li>Visita a palenques de mezcal</li>
+    </ul>
+
+    <h2>Galería</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Monte%20Alban,%20Oaxaca.%20Agosto%202009.JPG" alt="Monte Albán" style="width:100%;height:160px;object-fit:cover;border-radius:8px">
+      <img src="https://ep01.epimg.net/verne/imagenes/2020/07/24/mexico/1595548705_180095_1595548849_noticia_normal.jpg" alt="Tlayuda" style="width:100%;height:160px;object-fit:cover;border-radius:8px">
+      <img src="https://cdn0.recetasgratis.net/es/posts/5/4/6/mole_negro_76645_orig.jpg" alt="Mole negro" style="width:100%;height:160px;object-fit:cover;border-radius:8px">
+    </div>
+
+    
+
+    <h2>Gastronomía Típica</h2>
+    <p>Moles, tlayudas, chocolate de metate y mezcal artesanal.</p>
+
+    <h2>Actividades</h2>
+    <ul>
+      <li>Visitar Monte Albán</li>
+      <li>Recorrido por mercados y talleres de mezcal</li>
+      <li>Clases de cocina tradicional</li>
+    </ul>
+
+    <div id="map-target" data-place="oaxaca" style="margin-top:18px;"></div>
+
+    <h2>Interacción</h2>
+    <div id="interaccion-oax" style="display:grid;gap:12px">
+      <button id="rate-oax" class="btn primary">Califica este lugar</button>
+      <div id="stars-oax" style="display:none;font-size:24px;color:#ff7b00">
+        <span data-v="1">★</span><span data-v="2">★</span><span data-v="3">★</span><span data-v="4">★</span><span data-v="5">★</span>
+        <span id="rate-val-oax" style="margin-left:8px"></span>
+      </div>
+      <div style="display:flex;gap:8px;align-items:center">
+        <a class="btn ghost" href="https://twitter.com/intent/tweet?text=Oaxaca%20gastron%C3%B3mica&url=" target="_blank">Twitter</a>
+        <a class="btn ghost" href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank">Facebook</a>
+        <a class="btn ghost" href="https://api.whatsapp.com/send?text=Oaxaca%20gastron%C3%B3mica%20" target="_blank">WhatsApp</a>
+      </div>
+      <form id="form-oax" style="display:flex;gap:8px">
+        <input id="comment-oax" type="text" placeholder="Escribe un comentario" style="flex:1;padding:8px;border-radius:8px;border:1px solid #ddd">
+        <button class="btn primary" type="submit">Enviar</button>
+      </form>
+      <ul id="list-oax" style="display:grid;gap:6px"></ul>
+    </div>
+
+    <a class="back-btn" href="index.html">⟵ Volver al Inicio</a>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    (function(){
+      const rateBtn = document.getElementById('rate-oax');
+      const stars = document.getElementById('stars-oax');
+      const val = document.getElementById('rate-val-oax');
+      const form = document.getElementById('form-oax');
+      const inp = document.getElementById('comment-oax');
+      const list = document.getElementById('list-oax');
+      const saved = JSON.parse(localStorage.getItem('comments-oaxaca')||'[]');
+      saved.forEach(t=>{ const li=document.createElement('li'); li.textContent=t; list.appendChild(li); });
+      rateBtn.addEventListener('click',()=>{ stars.style.display='block'; });
+      stars.querySelectorAll('span[data-v]').forEach(s=>{
+        s.addEventListener('click',()=>{ const n=s.getAttribute('data-v'); localStorage.setItem('rating-oaxaca',n); val.textContent=n+'/5'; });
+      });
+      form.addEventListener('submit',(e)=>{ e.preventDefault(); const t=inp.value.trim(); if(!t) return; const li=document.createElement('li'); li.textContent=t; list.appendChild(li); const arr=JSON.parse(localStorage.getItem('comments-oaxaca')||'[]'); arr.push(t); localStorage.setItem('comments-oaxaca',JSON.stringify(arr)); inp.value=''; });
+    })();
+  </script>
+</body>
+</html>
