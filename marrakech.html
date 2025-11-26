@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Marrakech — Sabores y Destinos</title>
+  <meta name="description" content="Marrakech, tagines, especias marroquíes y la magia de los zocos.">
+  <meta name="theme-color" content="#ff7b00">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-container{padding:26px 28px}
+    .page-container h1{margin:0 0 18px}
+    .page-container h2{margin:26px 0 12px}
+    .page-container .card{margin:8px 0 14px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.08)}
+    .page-container .gallery-grid{gap:14px}
+    .page-container .simple-carousel{margin:18px 0 26px}
+    .page-container div[style*="grid-template-columns"]{margin:12px 0 20px}
+    .page-container [id^="interaccion-"]{margin-top:22px;padding-top:8px}
+    .page-container .back-btn{margin-top:18px;display:inline-block}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">← Sabores y Destinos</a>
+      <div style="display:flex;gap:8px">
+        <a class="back-btn" href="index.html">Volver</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-container fade-in">
+    <h1>Marrakech, Marruecos</h1>
+    <p class="center">Tagines, especias aromáticas, té a la menta y la cultura bereber.</p>
+
+    <div class="simple-carousel" style="overflow:hidden; height:280px; border-radius:10px; margin:14px 0;">
+      <div class="slide" style="background:url('https://commons.wikimedia.org/wiki/Special:FilePath/Koutoubia%20Mosque%20-%20Marrakech.JPG') center/cover; height:280px" aria-label="Mezquita Koutoubia"></div>
+      <div class="slide" style="background:url('https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=1600&q=60') center/cover; height:280px"></div>
+      <div class="slide" style="background:url('https://images.unsplash.com/photo-1569383746724-6f2ca4be8d8c?auto=format&fit=crop&w=1600&q=60') center/cover; height:280px"></div>
+    </div>
+
+    <h2>Información general</h2>
+    <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:16px;align-items:start;">
+      <div>
+        <p>Marrakech cautiva con zocos, plazas y aromas de especias. Su cocina combina tradición bereber y árabe en tagines lentos, cuscús festivo y pastelas crujientes.</p>
+      </div>
+      <div>
+        <div style="position:relative;padding-top:56%">
+          <iframe src="https://www.youtube.com/embed/2u0EryZuit4" title="Marrakech presentación" style="position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:10px" loading="lazy" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <h2>Gastronomía típica</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px">
+      <a class="card interactive" href="marrakech-tagine.html" style="padding:12px;text-decoration:none">
+       <center><h3>Tagine</h3></center> 
+        <p>Guiso lento en barro con especias y frutos secos.</p>
+        <img src="https://www.shoothecook.es/wp-content/uploads/tagine-con-verduras-f-600x750.jpg" alt="Tagine" style="width:100%;height:140px;object-fit:cover;border-radius:8px;margin-top:8px">
+      </a>
+      <a class="card interactive" href="marrakech-cuscus.html" style="padding:12px;text-decoration:none">
+        <center><h3>Cuscús</h3></center>
+        <p>Sémola al vapor con verduras y caldo aromático.</p>
+        <img src="https://recetasdecocina.elmundo.es/wp-content/uploads/2017/04/receta-cuscus-655x420.jpg" alt="Cuscús" style="width:100%;height:140px;object-fit:cover;border-radius:8px;margin-top:8px">
+      </a>
+      <a class="card interactive" href="marrakech-pastela.html" style="padding:12px;text-decoration:none">
+        <center><h3>Pastela</h3></center>
+        <p>Hojaldre relleno dulce-salado para celebraciones.</p>
+        <img src="https://imagenes.elpais.com/resizer/v2/https%3A%2F%2Fep01.epimg.net%2Felcomidista%2Fimagenes%2F2022%2F04%2F27%2Freceta%2F1651074031_477894_1651853201_noticia_fotograma.jpg?auth=941d9a14e1c85093e64c9711b0baa698ed18f5a89c132dc35a1eee5a51935a69&width=828&height=466&smart=true" alt="Pastela" style="width:100%;height:140px;object-fit:cover;border-radius:8px;margin-top:8px">
+      </a>
+    </div>
+
+    <h2>Restaurantes recomendados</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px">
+      <div class="card" style="padding:12px">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWY4BBNs9rIMBfB-sJ3Z5pR1OcO1jw2NbnVA&s" alt="Restaurante en Marrakech" style="width:100%;border-radius:8px;object-fit:cover;height:140px">
+        <center><h3>Nomad</h3></center>
+        <p>Dirección: Medina</p>
+        <p>Precio promedio: $$</p>
+        <p>Tipo: Moderna marroquí</p>
+        <p>Horarios: 12:00–23:00</p>
+        <p>Reseña: terraza con vista y producto local.</p>
+        <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Nomad+Marrakech" target="_blank">Abrir en Maps</a>
+      </div>
+      <div class="card" style="padding:12px">
+        <img src="https://daryacout.com/wp-content/uploads/2022/09/7Z6A9358.jpg" alt="Restaurante en Marrakech" style="width:100%;border-radius:8px;object-fit:cover;height:140px">
+        <center><h3>Dar Yacout</h3></center>
+        <p>Dirección: Medina</p>
+        <p>Precio promedio: $$$</p>
+        <p>Tipo: Tradicional marroquí</p>
+        <p>Horarios: 19:00–23:00</p>
+        <p>Reseña: experiencia clásica en riad.</p>
+        <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Dar+Yacout+Marrakech" target="_blank">Abrir en Maps</a>
+      </div>
+      <div class="card" style="padding:12px">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/71/9c/43/main-dinning-room.jpg?w=900&h=500&s=1" alt="Restaurante en Marrakech" style="width:100%;border-radius:8px;object-fit:cover;height:140px">
+        <center><h3>Al Fassia</h3></center>
+        <p>Dirección: Gueliz</p>
+        <p>Precio promedio: $$</p>
+        <p>Tipo: Tradicional casero</p>
+        <p>Horarios: 13:00–23:00</p>
+        <p>Reseña: clásico de tagines y cuscús.</p>
+        <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Al+Fassia+Marrakech" target="_blank">Abrir en Maps</a>
+      </div>
+    </div>
+
+    <h2>Eventos gastronómicos</h2>
+    <ul>
+      <li>Festival de Especias de Marrakech — primavera</li>
+      <li>Mercados de Ramadán — fechas móviles</li>
+    </ul>
+
+    <h2>Experiencias culinarias</h2>
+    <ul>
+      <li>Clases de tagine en riad</li>
+      <li>Tour de zocos y especias</li>
+      <li>Cata de té a la menta</li>
+    </ul>
+
+    <h2>Galería</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px">
+      <img src="https://www.shoothecook.es/wp-content/uploads/tagine-con-verduras-f-600x750.jpg" alt="Koutoubia" style="width:100%;height:160px;object-fit:cover;border-radius:8px">
+      <img src="https://recetasdecocina.elmundo.es/wp-content/uploads/2017/04/receta-cuscus-655x420.jpg" alt="Tagine" style="width:100%;height:160px;object-fit:cover;border-radius:8px">
+      <img src="https://daryacout.com/wp-content/uploads/2022/09/7Z6A9358.jpg" alt="Cuscús" style="width:100%;height:160px;object-fit:cover;border-radius:8px">
+    </div>
+
+    
+
+    <h2>Gastronomía Típica</h2>
+    <p>Tagine, cuscús, té a la menta, pastela, harira y especias marroquíes.</p>
+
+    <h2>Timer Interactivo: Preparación de Tagine</h2>
+    <div class="interactive-section">
+      <p>¡Aprende a preparar un auténtico tagine marroquí con nuestro timer interactivo!</p>
+      
+      <div class="tagine-timer">
+        <div class="timer-setup">
+          <h4>Selecciona tu receta de tagine:</h4>
+          <div class="recipe-selection">
+            <div class="recipe-card" data-recipe="pollo-cilantro">
+              <div class="recipe-icon">🍗</div>
+              <h5>Tagine de Pollo con Cilantro</h5>
+              <p>Tiempo: 45 min</p>
+            </div>
+            <div class="recipe-card" data-recipe="cordero-albaricoques">
+              <div class="recipe-icon">🐑</div>
+              <h5>Tagine de Cordero con Albaricoques</h5>
+              <p>Tiempo: 90 min</p>
+            </div>
+            <div class="recipe-card" data-recipe="verduras-especias">
+              <div class="recipe-icon">🥕</div>
+              <h5>Tagine de Verduras y Especias</h5>
+              <p>Tiempo: 30 min</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="timer-display" id="timer-display" style="display:none;">
+          <div class="timer-circle">
+            <div class="timer-time" id="timer-time">00:00</div>
+            <div class="timer-label" id="timer-label">Preparación</div>
+          </div>
+          
+          <div class="timer-progress">
+            <div class="progress-bar">
+              <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <div class="progress-text" id="progress-text">Paso 1 de 5</div>
+          </div>
+          
+          <div class="timer-controls">
+            <button id="start-timer" class="btn primary">▶️ Iniciar</button>
+            <button id="pause-timer" class="btn ghost" style="display:none;">⏸️ Pausar</button>
+            <button id="skip-step" class="btn ghost">⏭️ Saltar paso</button>
+            <button id="reset-timer" class="btn ghost">🔄 Reiniciar</button>
+          </div>
+        </div>
+        
+        <div class="timer-steps" id="timer-steps" style="display:none;">
+          <h4>Pasos de preparación:</h4>
+          <div class="steps-list" id="steps-list">
+            <!-- Steps will be populated by JavaScript -->
+          </div>
+        </div>
+        
+        <div class="timer-completion" id="timer-completion" style="display:none;">
+          <div class="completion-message">
+            <div class="completion-icon">🎉</div>
+            <h4>¡Tu tagine está listo!</h4>
+            <p>¡Felicitaciones! Has preparado un auténtico tagine marroquí.</p>
+            <button id="share-recipe" class="btn primary">Compartir receta</button>
+          </div>
+        </div>
+        
+        <div class="spice-guide">
+          <h4>Especias típicas del tagine:</h4>
+          <div class="spices-grid">
+            <div class="spice-item">
+              <div class="spice-icon">🌿</div>
+              <span>Cilantro</span>
+            </div>
+            <div class="spice-item">
+              <div class="spice-icon">🌶️</div>
+              <span>Pimentón</span>
+            </div>
+            <div class="spice-item">
+              <div class="spice-icon">🧄</div>
+              <span>Ajo</span>
+            </div>
+            <div class="spice-item">
+              <div class="spice-icon">🧅</div>
+              <span>Cebolla</span>
+            </div>
+            <div class="spice-item">
+              <div class="spice-icon">🫚</div>
+              <span>Jengibre</span>
+            </div>
+            <div class="spice-item">
+              <div class="spice-icon">🌿</div>
+              <span>Perejil</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Actividades</h2>
+    <ul>
+      <li>Explorar los zocos de la Medina</li>
+      <li>Clase de cocina marroquí tradicional</li>
+      <li>Ceremonia del té en la Plaza Jemaa el-Fnaa</li>
+    </ul>
+
+    <div id="map-target" data-place="marrakech" style="margin-top:18px;"></div>
+
+    <h2>Interacción</h2>
+    <div id="interaccion-mar" style="display:grid;gap:12px">
+      <button id="rate-mar" class="btn primary">Califica este lugar</button>
+      <div id="stars-mar" style="display:none;font-size:24px;color:#ff7b00">
+        <span data-v="1">★</span><span data-v="2">★</span><span data-v="3">★</span><span data-v="4">★</span><span data-v="5">★</span>
+        <span id="rate-val-mar" style="margin-left:8px"></span>
+      </div>
+      <div style="display:flex;gap:8px;align-items:center">
+        <a class="btn ghost" href="https://twitter.com/intent/tweet?text=Marrakech%20gastron%C3%B3mica&url=" target="_blank">Twitter</a>
+        <a class="btn ghost" href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank">Facebook</a>
+        <a class="btn ghost" href="https://api.whatsapp.com/send?text=Marrakech%20gastron%C3%B3mica%20" target="_blank">WhatsApp</a>
+      </div>
+      <form id="form-mar" style="display:flex;gap:8px">
+        <input id="comment-mar" type="text" placeholder="Escribe un comentario" style="flex:1;padding:8px;border-radius:8px;border:1px solid #ddd">
+        <button class="btn primary" type="submit">Enviar</button>
+      </form>
+      <ul id="list-mar" style="display:grid;gap:6px"></ul>
+    </div>
+
+    <a class="back-btn" href="index.html">⟵ Volver al Inicio</a>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    (function(){
+      var cards = document.querySelectorAll('.recipe-card');
+      var display = document.getElementById('timer-display');
+      var tTime = document.getElementById('timer-time');
+      var tLabel = document.getElementById('timer-label');
+      var fill = document.getElementById('progress-fill');
+      var pText = document.getElementById('progress-text');
+      var start = document.getElementById('start-timer');
+      var pause = document.getElementById('pause-timer');
+      var skip = document.getElementById('skip-step');
+      var reset = document.getElementById('reset-timer');
+      var steps = document.getElementById('steps-list');
+      var completion = document.getElementById('timer-completion');
+      var stepsWrap = document.getElementById('timer-steps');
+      var share = document.getElementById('share-recipe');
+      if (!cards.length || window.__tagineTimerInit__) return;
+      window.__tagineTimerInit__ = true;
+      var selected = null; var current = 0; var remain = 0; var total = 0; var interval = null; var paused = false;
+      var data = {
+        'pollo-cilantro':{name:'Tagine de Pollo con Cilantro',totalTime:45,steps:['Saltear la cebolla y el pollo (10 min)','Agregar especias y agua (5 min)','Cocinar a fuego lento (20 min)','Agregar cilantro y limón (5 min)','Reposar y servir (5 min)']},
+        'cordero-albaricoques':{name:'Tagine de Cordero con Albaricoques',totalTime:90,steps:['Marinar el cordero (15 min)','Saltear cebollas y especias (10 min)','Agregar cordero y cocinar (30 min)','Incorporar albaricoques (20 min)','Finalizar y reposar (15 min)']},
+        'verduras-especias':{name:'Tagine de Verduras y Especias',totalTime:30,steps:['Preparar verduras (5 min)','Saltear especias (5 min)','Agregar verduras y agua (5 min)','Cocinar al vapor (10 min)','Decorar y servir (5 min)']}
+      };
+      function updateTimer(){ var m=Math.floor(remain/60), s=remain%60; tTime.textContent=(m+"").padStart(2,'0')+":"+(s+"").padStart(2,'0'); if(selected){ var r=data[selected]; var idx=Math.floor((total-remain)/(total/r.steps.length)); var name=idx<r.steps.length?r.steps[idx]:'Finalizando...'; tLabel.textContent=name; } }
+      function updateSteps(){ if(!selected) return; var r=data[selected]; steps.innerHTML=''; r.steps.forEach(function(st,i){ var d=document.createElement('div'); d.className='step-item'; if(i<current) d.classList.add('completed'); else if(i===current) d.classList.add('current'); d.innerHTML='<span class="step-number">'+(i+1)+'</span> '+st; steps.appendChild(d); }); pText.textContent='Paso '+Math.min(current+1,r.steps.length)+' de '+r.steps.length; }
+      function complete(){ if(interval){ clearInterval(interval); interval=null; } completion.style.display='block'; display.style.display='none'; stepsWrap.style.display='none'; }
+      cards.forEach(function(c){ c.setAttribute('tabindex','0'); c.setAttribute('role','button'); c.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); c.click(); } }); c.addEventListener('click',function(){ cards.forEach(function(x){ x.classList.remove('selected'); }); c.classList.add('selected'); selected=c.dataset.recipe; var r=data[selected]; total=r.totalTime*60; remain=total; current=0; display.style.display='block'; stepsWrap.style.display='block'; completion.style.display='none'; updateTimer(); updateSteps(); if(interval){ clearInterval(interval); interval=null; } start.style.display='inline-block'; pause.style.display='none'; paused=false; }); });
+      start.addEventListener('click',function(){ if(!selected) return; start.style.display='none'; pause.style.display='inline-block'; paused=false; interval=setInterval(function(){ if(!paused&&remain>0){ remain--; updateTimer(); var prog=((total-remain)/total)*100; fill.style.width=prog+'%'; var sp=(total-remain)/(total/data[selected].steps.length); var idx=Math.floor(sp); if(idx>current){ current=idx; updateSteps(); } if(remain===0){ complete(); } } },1000); });
+      pause.addEventListener('click',function(){ paused=!paused; this.textContent=paused?'▶️ Reanudar':'⏸️ Pausar'; });
+      reset.addEventListener('click',function(){ if(interval){ clearInterval(interval); interval=null; } if(selected){ var r=data[selected]; remain=r.totalTime*60; current=0; updateTimer(); updateSteps(); fill.style.width='0%'; } start.style.display='inline-block'; pause.style.display='none'; completion.style.display='none'; paused=false; });
+      skip.addEventListener('click',function(){ if(!selected) return; var count=data[selected].steps.length; var chunk=total/count; var elapsed=total-remain; var idx=Math.floor(elapsed/chunk); if(idx>=count-1){ complete(); return; } idx=idx+1; remain=Math.max(0,total-idx*chunk); current=Math.min(idx,count-1); updateTimer(); updateSteps(); var prog=((total-remain)/total)*100; fill.style.width=prog+'%'; if(remain===0) complete(); });
+      share.addEventListener('click',function(){ if(selected&&data[selected]){ var r=data[selected]; var txt='¡Acabo de preparar un delicioso '+r.name+' usando el timer interactivo de Sabores y Destinos! 🍲'; if(navigator.share){ navigator.share({ title:'Receta de Tagine Marroquí', text:txt, url:window.location.href }); } else { navigator.clipboard.writeText(txt); alert('¡Texto copiado al portapapeles!'); } } });
+    })();
+  </script>
+  <script>
+    (function(){
+      const rateBtn = document.getElementById('rate-mar');
+      const stars = document.getElementById('stars-mar');
+      const val = document.getElementById('rate-val-mar');
+      const form = document.getElementById('form-mar');
+      const inp = document.getElementById('comment-mar');
+      const list = document.getElementById('list-mar');
+      const saved = JSON.parse(localStorage.getItem('comments-marrakech')||'[]');
+      saved.forEach(t=>{ const li=document.createElement('li'); li.textContent=t; list.appendChild(li); });
+      rateBtn.addEventListener('click',()=>{ stars.style.display='block'; });
+      stars.querySelectorAll('span[data-v]').forEach(s=>{
+        s.addEventListener('click',()=>{ const n=s.getAttribute('data-v'); localStorage.setItem('rating-marrakech',n); val.textContent=n+'/5'; });
+      });
+      form.addEventListener('submit',(e)=>{ e.preventDefault(); const t=inp.value.trim(); if(!t) return; const li=document.createElement('li'); li.textContent=t; list.appendChild(li); const arr=JSON.parse(localStorage.getItem('comments-marrakech')||'[]'); arr.push(t); localStorage.setItem('comments-marrakech',JSON.stringify(arr)); inp.value=''; });
+    })();
+  </script>
+</body>
+</html>
