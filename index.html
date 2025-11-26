@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sabores y Destinos</title>
+  <meta name="description" content="Descubre ciudades a través de su gastronomía: rutas, mercados y experiencias para viajar con el paladar.">
+  <meta name="theme-color" content="#ff7b00">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+</head>
+<body>
+  <!-- Presentation Mode Toggle -->
+  <button id="cube-mode-toggle" class="cube-mode-toggle" title="Activar modo presentación">Pulsa aquí</button>
+
+  <!-- Presentation Scene - Simulated cube effect without 3D -->
+  <div id="cube-scene" class="presentation-scene" style="display: none;">
+    <button class="presentation-exit-btn" onclick="exitPresentationToMain()" title="Página principal">↩️ Página principal</button>
+    <div id="mini-orientation-cube" class="mini-orientation-cube" style="display: none;" data-slide="front">
+      <div class="mini-cube">
+        <div class="mini-cube-face front">Inicio</div>
+        <div class="mini-cube-face back">Nosotros</div>
+        <div class="mini-cube-face right">Destinos</div>
+        <div class="mini-cube-face left">Juego</div>
+        <div class="mini-cube-face top">Contacto</div>
+        <div class="mini-cube-face bottom">Más</div>
+      </div>
+    </div>
+    <!-- Floating particles -->
+    <div class="particles">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+    
+    <div id="cube-container" class="presentation-container">
+      <!-- Front Slide - Inicio (Caleidoscopio) -->
+      <div class="presentation-slide front active" data-slide="front">
+        <div id="kaleidoscope-container"></div>
+      </div>
+
+      <!-- Right Slide - Destinos -->
+      <div class="presentation-slide right" data-slide="right">
+        <section class="section">
+          <h2>Destinos Destacados</h2>
+          <p class="section-sub">Haz hover o toca cada tarjeta para escuchar un pequeño sonido y haz clic para ver más.</p>
+
+          <div class="destinos-carousel">
+            <button class="carousel-btn prev" aria-label="Anterior" onclick="moveCarousel('prev')">‹</button>
+            <div class="carousel-viewport" id="destinos-viewport-cube">
+              <div class="carousel-track" id="carousel-track-cube">
+                <a href="cartagena.html" class="card interactive" data-sound="true">
+                  <div class="card-media">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Castillo%20de%20San%20Felipe%20de%20Barajas%2001.jpg" alt="Castillo de San Felipe de Barajas, Cartagena">
+                  </div>
+                  <div class="card-body">
+                    <h3>Cartagena, Colombia</h3>
+                    <p>Sabores caribeños: arroz con coco, pescado frito y tradición.</p>
+                  </div>
+                </a>
+
+                <a href="oaxaca.html" class="card interactive" data-sound="true">
+                  <div class="card-media">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Monte%20Alban,%20Oaxaca.%20Agosto%202009.JPG" alt="Oaxaca - Pirámides de Monte Albán">
+                  </div>
+                  <div class="card-body">
+                    <h3>Oaxaca, México</h3>
+                    <p>Moles, mercados y mezcal artesanal.</p>
+                  </div>
+                </a>
+
+                <a href="napoles.html" class="card interactive" data-sound="true">
+                  <div class="card-media">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Napoli%20-%20Castel%20dell%27Ovo.JPG" alt="Nápoles - Castel dell'Ovo">
+                  </div>
+                  <div class="card-body">
+                    <h3>Nápoles, Italia</h3>
+                    <p>La cuna de la pizza y la tradición napolitana.</p>
+                  </div>
+                </a>
+
+                <a href="lima.html" class="card interactive" data-sound="true">
+                  <div class="card-media">
+                    <img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=800&q=80" alt="Lima">
+                  </div>
+                  <div class="card-body">
+                    <h3>Lima, Perú</h3>
+                    <p>Fusión nikkei, ceviche y creatividad gastronómica.</p>
+                  </div>
+                </a>
+
+                <a href="bangkok.html" class="card interactive" data-sound="true">
+                  <div class="card-media">
+                    <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=800&q=60" alt="Bangkok">
+                  </div>
+                  <div class="card-body">
+                    <h3>Bangkok, Tailandia</h3>
+                    <p>Mercados flotantes, street food y sabores tailandeses.</p>
+                  </div>
+                </a>
+
+                <a href="barcelona.html" class="card interactive" data-sound="true">
+                  <div class="card-media">
+                    <img src="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?auto=format&fit=crop&w=800&q=60" alt="Barcelona">
+                  </div>
+                  <div class="card-body">
+                    <h3>Barcelona, España</h3>
+                    <p>Tapas, paella y la vibrante cocina mediterránea.</p>
+                  </div>
+                </a>
+
+                <a href="estambul.html" class="card interactive" data-sound="true">
+                  <div class="card-media">
+                    <img src="https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?auto=format&fit=crop&w=800&q=60" alt="Estambul">
+                  </div>
+                  <div class="card-body">
+                    <h3>Estambul, Turquía</h3>
+                    <p>Bazar de especias, kebabs y fusión de culturas.</p>
+                  </div>
+                </a>
+
+                <a href="tokio.html" class="card interactive" data-sound="true">
+                  <div class="card-media">
+                    <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=800&q=60" alt="Tokio">
+                  </div>
+                  <div class="card-body">
+                    <h3>Tokio, Japón</h3>
+                    <p>Sushi, ramen y la perfección de la cocina japonesa.</p>
+                  </div>
+                </a>
+
+                <a href="marrakech.html" class="card interactive" data-sound="true">
+                  <div class="card-media">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Koutoubia%20Mosque%20-%20Marrakech.JPG" alt="Marrakech - Mezquita Koutoubia">
+                  </div>
+                  <div class="card-body">
+                    <h3>Marrakech, Marruecos</h3>
+                    <p>Tagines, especias aromáticas y la magia de los zocos.</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <button class="carousel-btn next" aria-label="Siguiente" onclick="moveCarousel('next')">›</button>
+          </div>
+        </section>
+      </div>
+
+      <!-- Back Slide - Nosotros -->
+      <div class="presentation-slide back" data-slide="back">
+        <section class="section">
+          <h2>Sobre Nosotros</h2>
+          <div class="nosotros-grid">
+            <p>Somos un colectivo de viajeros, chefs aficionados y narradores que creen que conocer un lugar pasa por probar su comida. Compartimos rutas, recetas y experiencias.</p>
+
+            <div class="testimonials">
+              <h4>Experiencias</h4>
+              <div class="testi-carousel" id="testi-carousel-cube">
+                <div class="testi-slide">"El tour por mercados en Oaxaca cambió mi forma de cocinar." — Camila</div>
+                <div class="testi-slide">"Cartagena: playa + ceviche = felicidad." — Juan</div>
+                <div class="testi-slide">"Comer pizza en Nápoles fue mágico." — Andrés</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Left Slide - Juego -->
+      <div class="presentation-slide left" data-slide="left">
+        <section class="section">
+          <h2>Juego 2048</h2>
+          <p class="section-sub">Mueve los números con las flechas del teclado</p>
+          <div class="container">
+            <div class="game-2048">
+              <div class="game-header">
+                <div class="scoreboard">
+                  <div>Puntaje: <span id="score-cube">0</span></div>
+                  <div>Mejor: <span id="best-cube">0</span></div>
+                </div>
+                <div class="game-controls">
+                  <button id="new-game-cube" class="btn primary">Nuevo</button>
+                </div>
+              </div>
+              <div class="board" id="board-cube"></div>
+              <div id="game-message-cube" class="game-message">
+                <div class="message-text"></div>
+                <div style="display:flex;gap:8px;">
+                  <button id="continue-game-cube" class="btn">Continuar</button>
+                  <button id="restart-game-cube" class="btn primary">Reiniciar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Top Slide - Contacto -->
+      <div class="presentation-slide top" data-slide="top">
+        <section class="section">
+          <h2>Contacto</h2>
+          <form id="contact-form-cube" class="contact-form">
+            <input type="text" name="name" placeholder="Tu nombre" required>
+            <input type="email" name="email" placeholder="Tu correo" required>
+            <textarea name="message" placeholder="Tu mensaje..." rows="5"></textarea>
+            <div class="form-row">
+              <button type="submit" class="btn primary">Enviar</button>
+              <button type="button" id="reset-theme-cube" class="btn ghost">Restablecer tema</button>
+            </div>
+          </form>
+        </section>
+      </div>
+
+      <!-- Bottom Slide - Footer -->
+      <div class="presentation-slide bottom" data-slide="bottom">
+        <section class="section">
+          <h2>© 2025 Sabores y Destinos</h2>
+          <div class="center">
+            <p>Descubre el mundo a través de sus sabores</p>
+                <div class="footer-links">
+                  <a href="La Receta de la Creación Web.pdf" download="La Receta de la Creación Web.pdf">La Receta de La Creación Web</a>
+                </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Presentation Navigation - Solo emojis, sin flechas -->
+    <div class="presentation-nav">
+      <button class="presentation-nav-btn" onclick="showSlide('front')" title="Inicio" data-slide="front">🏠</button>
+      <button class="presentation-nav-btn" onclick="showSlide('right')" title="Destinos" data-slide="right">🌍</button>
+      <button class="presentation-nav-btn" onclick="showSlide('back')" title="Nosotros" data-slide="back">👥</button>
+      <button class="presentation-nav-btn" onclick="showSlide('left')" title="Juego" data-slide="left">🎮</button>
+      <button class="presentation-nav-btn" onclick="showSlide('top')" title="Contacto" data-slide="top">📧</button>
+      <button class="presentation-nav-btn" onclick="showSlide('bottom')" title="Info" data-slide="bottom">ℹ️</button>
+    </div>
+
+    <!-- Auto-alignment system - no manual zoom controls needed -->
+    <div class="auto-align-indicator" id="auto-align-status" style="display: none;">
+      <div class="align-icon">⚡</div>
+      <span>Preparando presentación...</span>
+    </div>
+  </div>
+
+  <!-- Original Website Structure -->
+  <header class="site-header">
+    <div class="header-inner">
+      <button id="menu-toggle" class="hamburger" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+
+      <h1 class="brand">🍴 Sabores y Destinos</h1>
+
+      <div class="header-controls">
+        <button id="theme-toggle" class="btn-icon" title="Cambiar tema">🌙</button>
+      </div>
+    </div>
+
+    <nav id="main-nav" class="nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#destinos">Destinos</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main id="main" class="fade-in">
+    <section id="inicio" class="section reveal">
+      <div class="hero">
+        <div class="hero-text">
+          <h2>Descubre destinos donde la gastronomía manda</h2>
+          <p>Viaja con el paladar: comida auténtica, mercados, chefs y rutas que cuentan historias.</p>
+          <a href="#destinos" class="btn primary">Explorar destinos</a>
+        </div>
+        <div class="hero-illustration">
+          <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGg4MWhvZGZ2bnEyOHVsNmwxMzZsOGpybjJsM2pkMXpva2NrZXNtZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oriNOevPgG4zP1CDK/giphy.gif" alt="Gastronomía">
+        </div>
+      </div>
+    </section>
+
+
+    <section id="destinos" class="section reveal">
+      <h2>Destinos Destacados</h2>
+      <p class="section-sub">Haz hover o toca cada tarjeta para escuchar un pequeño sonido y haz clic para ver más.</p>
+
+      <div class="destinos-carousel">
+        <button class="carousel-btn prev" aria-label="Anterior" onclick="moveCarouselRegular('prev')">‹</button>
+        <div class="carousel-viewport" id="destinos-viewport">
+          <div class="carousel-track" id="carousel-track">
+            <a href="cartagena.html" class="card interactive" data-sound="true">
+              <div class="card-media">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Castillo%20de%20San%20Felipe%20de%20Barajas%2001.jpg" alt="Castillo de San Felipe de Barajas, Cartagena">
+              </div>
+              <div class="card-body">
+                <h3>Cartagena, Colombia</h3>
+                <p>Sabores caribeños: arroz con coco, pescado frito y tradición.</p>
+              </div>
+            </a>
+
+            <a href="oaxaca.html" class="card interactive" data-sound="true">
+              <div class="card-media">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Monte%20Alban,%20Oaxaca.%20Agosto%202009.JPG" alt="Oaxaca - Pirámides de Monte Albán">
+              </div>
+              <div class="card-body">
+                <h3>Oaxaca, México</h3>
+                <p>Moles, mercados y mezcal artesanal.</p>
+              </div>
+            </a>
+
+            <a href="napoles.html" class="card interactive" data-sound="true">
+              <div class="card-media">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Napoli%20-%20Castel%20dell%27Ovo.JPG" alt="Nápoles - Castel dell'Ovo">
+              </div>
+              <div class="card-body">
+                <h3>Nápoles, Italia</h3>
+                <p>La cuna de la pizza y la tradición napolitana.</p>
+              </div>
+            </a>
+
+            <a href="lima.html" class="card interactive" data-sound="true">
+              <div class="card-media">
+                <img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=800&q=80" alt="Lima">
+              </div>
+              <div class="card-body">
+                <h3>Lima, Perú</h3>
+                <p>Fusión nikkei, ceviche y creatividad gastronómica.</p>
+              </div>
+            </a>
+
+            <a href="bangkok.html" class="card interactive" data-sound="true">
+              <div class="card-media">
+                <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=800&q=60" alt="Bangkok">
+              </div>
+              <div class="card-body">
+                <h3>Bangkok, Tailandia</h3>
+                <p>Mercados flotantes, street food y sabores tailandeses.</p>
+              </div>
+            </a>
+
+            <a href="barcelona.html" class="card interactive" data-sound="true">
+              <div class="card-media">
+                <img src="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?auto=format&fit=crop&w=800&q=60" alt="Barcelona">
+              </div>
+              <div class="card-body">
+                <h3>Barcelona, España</h3>
+                <p>Tapas, paella y la vibrante cocina mediterránea.</p>
+              </div>
+            </a>
+
+            <a href="estambul.html" class="card interactive" data-sound="true">
+              <div class="card-media">
+                <img src="https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?auto=format&fit=crop&w=800&q=60" alt="Estambul">
+              </div>
+              <div class="card-body">
+                <h3>Estambul, Turquía</h3>
+                <p>Bazar de especias, kebabs y fusión de culturas.</p>
+              </div>
+            </a>
+
+            <a href="tokio.html" class="card interactive" data-sound="true">
+              <div class="card-media">
+                <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=800&q=60" alt="Tokio">
+              </div>
+              <div class="card-body">
+                <h3>Tokio, Japón</h3>
+                <p>Sushi, ramen y la perfección de la cocina japonesa.</p>
+              </div>
+            </a>
+
+            <a href="marrakech.html" class="card interactive" data-sound="true">
+              <div class="card-media">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Koutoubia%20Mosque%20-%20Marrakech.JPG" alt="Marrakech - Mezquita Koutoubia">
+              </div>
+              <div class="card-body">
+                <h3>Marrakech, Marruecos</h3>
+                <p>Tagines, especias aromáticas y la magia de los zocos.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <button class="carousel-btn next" aria-label="Siguiente" onclick="moveCarouselRegular('next')">›</button>
+      </div>
+    </section>
+
+
+    <section id="nosotros" class="section reveal">
+      <h2>Sobre Nosotros</h2>
+      <div class="nosotros-grid">
+        <p class="nosotros-text">Somos un colectivo de viajeros, chefs aficionados y narradores que creen que conocer un lugar pasa por probar su comida. Compartimos rutas, recetas y experiencias.</p>
+        <div class="testimonials">
+          <h4>Experiencias</h4>
+          <div class="testi-carousel" id="testi-carousel">
+            <div class="testi-slide">"El tour por mercados en Oaxaca cambió mi forma de cocinar." — Camila</div>
+            <div class="testi-slide">"Cartagena: playa + ceviche = felicidad." — Juan</div>
+            <div class="testi-slide">"Comer pizza en Nápoles fue mágico." — Andrés</div>
+          </div>
+        </div>
+        <div class="audio-player nosotros-audio">
+          <button id="nosotros-play" class="audio-play-btn" aria-label="Reproducir/Pausar">▶</button>
+          <audio id="nosotros-audio" preload="none" src="Teaser.mp3" type="audio/mpeg"></audio>
+          <div class="audio-progress" id="nosotros-progress"><div class="audio-progress-fill" id="nosotros-progress-fill"></div></div>
+        </div>
+        
+      </div>
+    </section>
+
+    <section id="juego" class="section reveal">
+      <h2>Juego 2048</h2>
+      <p class="section-sub">Mueve los números con las flechas del teclado</p>
+      <div class="container">
+        <div class="game-2048">
+          <div class="game-header">
+            <div class="scoreboard">
+              <div>Puntaje: <span id="score">0</span></div>
+              <div>Mejor: <span id="best">0</span></div>
+            </div>
+            <div class="game-controls">
+              <button id="new-game" class="btn primary">Nuevo</button>
+            </div>
+          </div>
+          <div class="board" id="board"></div>
+          <div id="game-message" class="game-message">
+            <div class="message-text"></div>
+            <div style="display:flex;gap:8px;">
+              <button id="continue-game" class="btn">Continuar</button>
+              <button id="restart-game" class="btn primary">Reiniciar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div style="display:flex; justify-content:center; margin:24px 0">
+        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@sgaravito1/video/7576915895751134475" data-video-id="7576915895751134475" style="max-width: 520px; min-width: 325px;">
+          <section>
+            <a target="_blank" title="@sgaravito1" href="https://www.tiktok.com/@sgaravito1">@sgaravito1</a>
+          </section>
+        </blockquote>
+      </div>
+      <script async src="https://www.tiktok.com/embed.js"></script>
+    </section>
+
+    <section id="contacto" class="section reveal">
+      <h2>Contacto</h2>
+      <form id="contact-form" class="contact-form">
+        <input type="text" name="name" placeholder="Tu nombre" required>
+        <input type="email" name="email" placeholder="Tu correo" required>
+        <textarea name="message" placeholder="Tu mensaje..." rows="5"></textarea>
+        <div class="form-row">
+          <button type="submit" class="btn primary">Enviar</button>
+          <button type="button" id="reset-theme" class="btn ghost">Restablecer tema</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>© 2025 Sabores y Destinos</div>
+    <div class="footer-links">
+      <a href="La Receta de la Creación Web.pdf" download="La Receta de la Creación Web.pdf">La Receta de La Creación Web</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
